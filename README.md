@@ -1,5 +1,9 @@
 # project-baseConfig<br>
 <br>
 Prerequisite environment<br>
-Clang(llvm)<br>
-CMake or VSCode
+CMake<br>
+Ninja(Build system)<br>
+Clang(llvm)<br><br>
+
+Use Command<br>
+cmake -G "Ninja" ..
