@@ -5,12 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug",
             "type": "lldb",
             "request": "launch",
-            "name": "Debug",
-            "program": "${workspaceFolder}/build/debug/${fileBasenameNoExtension}.exe",
+            "program": "${command:cmake.launchTargetPath}",
             "args": [],
-            "cwd": "${workspaceFolder}"
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console":"externalTerminal",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    
+                }
+            ]
         }
     ]
 }
