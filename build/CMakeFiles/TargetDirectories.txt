@@ -1,3 +1,0 @@
-E:/work_space/project-baseConfig/build/CMakeFiles/main_app.dir
-E:/work_space/project-baseConfig/build/CMakeFiles/edit_cache.dir
-E:/work_space/project-baseConfig/build/CMakeFiles/rebuild_cache.dir
