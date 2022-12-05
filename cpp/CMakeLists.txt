@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 set(PROJECT_NAME projectConfig)
 set(BUILD_OUTPUT_NAME main_app)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/)
 
 project(${PROJECT_NAME}
 	VERSION 0.0.1
@@ -9,6 +10,7 @@ project(${PROJECT_NAME}
 	LANGUAGES CXX)
 
 add_executable(${BUILD_OUTPUT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/source/main.cpp)
+target_include_directories(${BUILD_OUTPUT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_features(${BUILD_OUTPUT_NAME} PUBLIC cxx_std_17)
 target_compile_options(${BUILD_OUTPUT_NAME} PUBLIC
 	$<$<CXX_COMPILER_ID:Clang>:
@@ -17,4 +19,4 @@ target_compile_options(${BUILD_OUTPUT_NAME} PUBLIC
 		$<$<CONFIG:RelWithDebgInfo>:-g -O3 -Wall>
 	>
 )
-target_include_directories(${BUILD_OUTPUT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
