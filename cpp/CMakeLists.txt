@@ -8,7 +8,7 @@ project(${PROJECT_NAME}
 	DESCRIPTION "Configure template project"
 	LANGUAGES CXX)
 
-add_executable(${BUILD_OUTPUT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
+add_executable(${BUILD_OUTPUT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/source/main.cpp)
 target_compile_features(${BUILD_OUTPUT_NAME} PUBLIC cxx_std_17)
 target_compile_options(${BUILD_OUTPUT_NAME} PUBLIC
 	$<$<CXX_COMPILER_ID:Clang>:
